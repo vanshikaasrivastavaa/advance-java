@@ -1,0 +1,25 @@
+import java.util.*;
+public class Array_List_Demo
+{
+  public static void main(String arg[]){
+	  ArrayList<Integer> al=new ArrayList<Integer>();
+	  al.add(2);
+	  al.add(3);
+	  al.add(45);
+	  al.add(70);
+	  System.out.println(al);
+	  ArrayList<String> al1=new ArrayList<String>();
+	  al1.add("vanshika");
+	  al1.add("Srivastava");
+	  al1.add("vishu");
+	  System.out.println(al1.remove("vishu"));
+	  System.out.println(al1.contains("vanshika"));
+	  System.out.println(al1.contains("pooja"));
+	  System.out.println(al1.remove(1));
+	  System.out.println(al1);
+//	  ArrayList<Boolean> al2= new ArrayList<Boolean>();
+//	  al2.add(true);
+//	  al2.add(false);
+//	  System.out.println(al2);
+	 }
+}
