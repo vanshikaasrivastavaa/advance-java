@@ -1,0 +1,39 @@
+import java.util.*;
+import java.io.*;
+public class LLDemo {
+  public static void main(String arg[])throws IOExceptiom
+  {
+	  LinkedList<String>  li=new LinkedList<>();
+	  li.add("America");
+	  li.add("India");
+	  li.add("Japan");
+	  System.out.println("List= "+li);
+	  BufferedReader b=new BufferedReader(new InputStreamReader(System.in));
+	  String element;
+	  int position,choice=0;
+	  while(choice<4)
+	  {
+		  System.out.println("\nLinkedList operation");
+		  System.out.println("1 Add an element");
+		  System.out.println("3 Change an element");
+		  System.out.println("4 Exit");
+		  
+		  System.out.println("Enter your choice");
+		  choice = Integer.parseInt(b.readLine());
+		  switch(choice)
+		  {
+			  case 1:System.out.println("Enter the element");
+			    element=b.readLine();
+			    System.out.print("eneter the position");
+			    position=Integer.parseInt(b.readLine());
+			    li.add(position-1,element);
+			    break;
+			  case 2:System.out.println("Enter position");
+			    position=Integer.parseInt(b.readLine());
+			    li.remove(position-1);
+			    break;
+			  
+		  }
+	  }
+  }
+}
