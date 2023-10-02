@@ -1,0 +1,41 @@
+import java.util.*;
+import java.util.stream.Collectors;
+public class product {
+	int id;
+	String name;
+	float price;
+	public product(int id, String name, float price) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+	}
+	public static void main(String arg[])
+	{
+		List<product> li=new ArrayList<product>();
+		li.add(new product(1,"HP",25000f));
+		li.add(new product(2,"Dell",30000f));
+		li.add(new product(3,"Lenevo",28000f));
+		li.add(new product(4,"Sony",28000f));
+		li.add(new product(5,"Apple",90000f));
+//		List<Float> li1=new ArrayList<Float>();
+//		user logic filtering data
+//		for(product p:li)
+//		{
+//			fltering data
+//			if(p.price<30000)
+//			{
+//				li1.add(p.price);
+//				
+//			}
+//		}
+//		System.out.println(li1);
+//		List<Float>li1=li.stream().filter(p->p.price>30000)//filtering data
+// 				                           .map(p->p.price)//fetching
+// 				                           .collect(Collectors.toList());
+//		System.out.println(li1);
+		double totalprice=li.stream().collect(Collectors.summingDouble(p->p.price));
+		System.out.println(totalprice);
+  
+}
+}
