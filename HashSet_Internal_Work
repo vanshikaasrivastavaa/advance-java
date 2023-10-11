@@ -1,0 +1,18 @@
+package set;
+import java.util.HashSet;
+
+public class hashset_internal_work {
+	public static void main(String arg[])
+	{
+	    HashSet hs=new HashSet();
+		boolean b1=hs.add("Ram"); 
+		boolean b2=hs.add("Sita"); 
+		boolean b3=hs.add("Ram"); 
+		boolean b4=hs.add("Amit"); 
+		
+		System.out.println(b1);
+		System.out.println(b2);
+		System.out.println(b3);
+		System.out.println(b4);
+	}
+}
