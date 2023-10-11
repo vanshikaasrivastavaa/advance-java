@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class HashSet_Test1 {
+	public static void main(String arg[]) {
+		ArrayList<String> al= new ArrayList<String>();
+		al.add("ram");
+		al.add("Sita");
+		al.add("ram");
+		HashSet<String> hs=new HashSet<>(al);
+		hs.add("ajay");
+		hs.add("ajay");
+		Iterator itr=hs.iterator();
+		while(itr.hasNext())
+		{
+			String name=(String)itr.next();
+			System.out.println(name);
+		}
+		System.out.println("user list:");
+		System.out.println(hs);
+	}
+
+}
