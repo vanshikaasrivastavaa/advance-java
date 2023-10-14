@@ -1,0 +1,41 @@
+import java.util.*;
+public class Student {
+	String name;
+	int rollno;
+    Student(String name, int rollno) {
+		this.name = name;
+		this.rollno = rollno;
+	}
+	public String toString()
+	{
+		return(name+" "+rollno);
+	}
+	public boolean equals (Object o)
+	{
+		Student st=(Student)o;
+		return(rollno==st.rollno);
+	}
+	public int hashCode ()
+	{
+		return(rollno%10);
+	}
+	public static void main(String arg[])
+	{
+		HashSet hs= new HashSet();
+		hs.add(new Student("Amit",101));
+		hs.add(new Student("sachin",102));
+		hs.add(new Student("puja",103));
+		hs.add(new Student("umika",104));
+		System.out.println("Size of hashset is:"+hs.size());
+		Iterator itr=hs.iterator();
+		while(itr.hasNext())
+		{
+			Student st =(Student)itr.next();
+			System.out.println(st.name+" "+st.rollno);
+		}
+		System.out.println("contains sachin,102"+hs.contains(new Student("sachin",102)));
+		System.out.println("remove sachin,102"+hs.remove(new Student("sachin",102)));
+		System.out.println("contains sachin,102"+hs.contains(new Student("sachin",102)));
+	}
+	
+}
