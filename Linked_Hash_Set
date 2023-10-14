@@ -1,0 +1,19 @@
+import java.util.*;
+public class Linked_Hash_Set {
+	public static void main(String arg[]) {
+		LinkedHashSet<String> lh = new LinkedHashSet<>();	
+		lh.add("one");
+		lh.add("two");
+		lh.add("three");
+		lh.add("four");
+		lh.add("six");
+		lh.add("five");
+		Iterator<String> i=lh.iterator();
+		while(i.hasNext())
+		{
+			System.out.println(i.next());
+		}
+		}
+	
+
+}
